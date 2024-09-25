@@ -1,0 +1,10 @@
+version:'3.8'
+
+services:
+nginx:
+image:nginx:latest
+ports:
+- "8081:80"
+volumes:
+- /run/desktop/mnt/host/c/ProgramData/Jenkins/workspace/aa:/usr/share/nginx/html:rw
+restart: unless-stopped
